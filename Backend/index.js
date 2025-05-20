@@ -22,11 +22,14 @@ app.post('/upload-resume', upload.single('resume'), async (req, res) => {
     console.log(req.file);
   try {
     const filePath = req.file.path;
+    // console.log(filePath);
     const fileData = fs.readFileSync(filePath);
-
+    // console.log(fileData);
     // Extract text using pdf-parse
     const pdfData = await pdfParse(fileData);
+    // console.log(pdfData);
     const text = pdfData.text;
+    // console.log(text);
 
     // Delete the uploaded file after processing (optional)
     fs.unlinkSync(filePath);
