@@ -7,6 +7,7 @@ import PdfUpload from './Components/PdfUpload'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {Route, Routes } from 'react-router-dom';
+import Signup from './Auth/Signup';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
     <>
     <Routes>
       <Route path="/" element={<Login />} />
+      <Route path="/signup" element={<Signup />} /> 
       <Route path="/PdfUpload" element={<PdfUpload />} />
     {/* <Login/> */}
     {/* <PdfUpload /> */}
