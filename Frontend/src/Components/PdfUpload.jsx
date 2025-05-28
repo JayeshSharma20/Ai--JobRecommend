@@ -34,16 +34,13 @@ const PdfUpload = () => {
   };
 
   return (
-    <div className=" flex flex-col items-center justify-center px-4 bg-gray-400 min-h-screen">
+    <div className=" flex flex-col items-center justify-center px-4 bg-gray-700 min-h-screen">
       <div className="w-full flex justify-between items-center py-4 px-6 shadow-sm fixed top-0 bg-white z-10">
-        <div className="text-purple-500 text-2xl font-bold">
+        <div className="text-purple-500 text-xl sm:text-2xl font-bold">
           Job.<span className="text-gray-800">Recommend</span>
         </div>
         <div className="flex items-center space-x-6 text-gray-600 font-medium">
-          {/* <span className="hover:underline cursor-pointer">Blog</span>
-          <span className="hover:underline cursor-pointer">Help</span>
-          <span className="hover:underline cursor-pointer">Pricing</span> */}
-          <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold px-5 py-2 rounded-full hover:opacity-90 transition"
+          <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full hover:opacity-90 transition"
             onClick={() => {
               localStorage.removeItem("user");
               localStorage.removeItem("token");
@@ -55,25 +52,10 @@ const PdfUpload = () => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-5xl font-extrabold text-white mb-6">PDF Upload</h1>
-
-        {/* <label
-          htmlFor="pdf-upload"
-          className="cursor-pointer bg-blue-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-blue-700 transition mb-2"
-        >
-          Upload PDF →
-          <input
-            type="file"
-            accept="application/pdf"
-            id="pdf-upload"
-            className="hidden"
-            onChange={handleFileChange}
-          />
-        </label> */}
-
+        <h1 className="text-2xl sm:text-4xl font-extrabold text-purple-400 mb-6">PDF Upload</h1>
         <label  
           htmlFor="pdf-upload"
-          className="relative w-100 flex flex-col items-center justify-center border-2 border-dashed border-blue-400 rounded-lg p-6 cursor-pointer hover:border-blue-600 transition mb-2 bg-white shadow-sm"
+          className="relative w-50 sm:w-100 flex flex-col items-center justify-center border-2 border-dashed border-blue-400 rounded-lg p-6 cursor-pointer hover:border-blue-600 transition mb-2 bg-white shadow-sm"
         >
           <input
             type="file"
@@ -106,7 +88,7 @@ const PdfUpload = () => {
 
         <button
           onClick={handleUpload}
-          className="mt-4 bg-purple-600 text-white font-semibold py-2 px-4 rounded-full hover:bg-purple-700 transition"
+          className="mt-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold py-2 px-4 rounded-full hover:bg-purple-700 transition"
         >
           Upload  
         </button>
