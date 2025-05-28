@@ -29,10 +29,10 @@ const Signup = () => {
 
   return (
     <div className="flex h-screen w-full">
-      <div className="hidden md:block md:w-1/1 bg-gradient-to-t from-black to-blue-500">
+      <div className="hidden md:block md:w-1/1 bg-gradient-to-t from-black to-orange-400">
         <h1 className="flex flex-col justify-center items-center mt-20 text-xl sm:text-4xl font-extrabold text-white mb-6 ">
           Welcome to <span className="text-orange-500 underline">Job.</span>
-          Recommend 
+          Recommendation
         <img
           src={image}
           alt="Job Illustration"
@@ -41,8 +41,8 @@ const Signup = () => {
         </h1>
       </div>
       <div className="flex flex-col justify-center items-start w-full md:w-1/2 px-6 sm:px-10 bg-white">
-        <h1 className="text-2xl sm:text-3xl font-extrabold items-start text-gray-700">
-          Sign<span className="text-blue-500">_Up</span>
+        <h1 className="text-2xl sm:text-3xl font-extrabold items-start text-gray-500">
+          Sign<span className="text-orange-500"> Up</span>
           <p className="text-sm sm:text-lg ">Start your professional journey with us.</p>
         </h1>
         <Formik
@@ -123,7 +123,7 @@ const Signup = () => {
                <Button
                variant="primary"
                 type="submit"
-                 className="w-50 py-2 mt-4 bg-blue-500 text-white font-semibold rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
+                 className="w-50 py-2 mt-4 bg-orange-500 text-white font-semibold rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
                 disabled={isSubmitting}
               >
                 {/* {isSubmitting ? 'Signing up...' : 'Sign Up'}
@@ -138,7 +138,7 @@ const Signup = () => {
           <p className="text-sm text-gray-500 mt-4">
             Already have an account?{" "}
             <span
-              className="text-blue-600 cursor-pointer hover:underline"
+              className="text-orange-600 cursor-pointer hover:underline"
               onClick={() => {
                 // setIsLogin(true);
                 navigate("/");

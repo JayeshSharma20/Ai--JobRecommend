@@ -48,9 +48,9 @@ export default function LoginForm() {
   return (
     <>
       <div className='flex h-screen w-full'>
-        <div className='hidden md:block md:w-1/1 bg-gradient-to-t from-black to-cyan-600'>
+        <div className='hidden md:block md:w-1/1 bg-gradient-to-t from-black to-orange-400'>
           <h1 className="flex flex-col justify-center items-center mt-20 text-3xl sm:text-4xl font-extrabold text-white mb-6 ">
-            Welcome to <span className='text-orange-500 underline'>Job.</span>Recommend
+            Welcome to <span className='text-orange-500 underline'>Job.</span>Recommendation
            <img
             src={image}
             alt="Job Illustration"
