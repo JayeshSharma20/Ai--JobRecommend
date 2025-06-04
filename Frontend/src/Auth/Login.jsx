@@ -48,19 +48,19 @@ export default function LoginForm() {
   return (
     <>
       <div className='flex h-screen w-full'>
-        <div className='hidden md:block md:w-1/1 bg-gradient-to-t from-black to-orange-400'>
-          <h1 className="flex flex-col justify-center items-center mt-20 text-3xl sm:text-4xl font-extrabold text-white mb-6 ">
-            Welcome to <span className='text-orange-500 underline'>Job.</span>Recommendation
+        <div className='hidden md:block md:w-1/1 bg-gray-400'>
+          <h1 className="flex flex-col justify-center items-center mt-26 text-3xl sm:text-4xl font-extrabold text-white mb-6 ">
+            <span className='text-white'> Welcome to <span className='text-purple-500'>SmartHire.</span></span>
            <img
             src={image}
             alt="Job Illustration"
-            className="max-w-[400px] h-auto"
+            className="max-w-[500px] h-auto"
           />
           </h1>
         </div>
-        <div className="flex flex-col justify-center items-start w-full md:w-1/2 px-6 sm:px-10 bg-white" >
+        <div className="flex flex-col justify-center items-start w-full md:w-1/2 px-4 sm:px-4 bg-white" >
           <h1 className="text-2xl sm:text-3xl font-extrabold  text-gray-500">
-          Sign<span className="text-orange-400"> In</span>
+          Sign<span className="text-purple-400"> In</span>
           <p className="text-sm sm:text-lg">Your Job Reccomendation Start Here.</p>
         </h1>
             <Formik
@@ -104,7 +104,7 @@ export default function LoginForm() {
                   <Button
                     variant='primary'
                     type="submit"
-                    className="w-50 py-2 mt-4 bg-orange-500 text-white font-semibold rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
+                    className="w-50 py-2 mt-4 bg-purple-500 text-white font-semibold rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? 'Signing in...' : 'Sign In'}
@@ -116,7 +116,7 @@ export default function LoginForm() {
               <p className="text-sm text-gray-500 mt-4">
                 Don't have an account?{' '}
                 <span
-                  className="text-orange-600 cursor-pointer hover:underline"
+                  className="text-purple-600 cursor-pointer hover:underline"
                   onClick={() => {
                     navigate('/signup');
                   }}

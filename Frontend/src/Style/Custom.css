@@ -1,0 +1,160 @@
+.upload-page {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #374151;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.25rem;
+  color: #8b5cf6;
+  font-weight: 700;
+}
+
+.logo-dark {
+  color: #1f2937;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.logout-button {
+  background: linear-gradient(to right, #8b5cf6, #3b82f6);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  transition: opacity 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  opacity: 0.9;
+}
+
+.upload-container {
+  margin-top: 6rem;
+  /* text-decoration: dotted underline; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #c084fc;
+  margin-bottom: 1rem;
+}
+
+.upload-box {
+  width: 300px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #3b82f6;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: border-color 0.3s;
+  margin-bottom: 0.5rem;
+}
+
+.upload-box:hover {
+  border-color: #2563eb;
+}
+
+.upload-instructions {
+  text-align: center;
+}
+
+.upload-icon {
+  height: 2rem;
+  width: 2rem;
+  color: #2563eb;
+  margin: 0 auto;
+}
+
+.upload-filename {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.upload-note {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.upload-btn {
+  margin-top: 1rem;
+  background: linear-gradient(to right, #7643ec, #216ce4);
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+  background-color: #7c3aed;
+}
+
+.user-count {
+  color: #111827;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.resume-preview {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 48rem;
+  background-color: #f3f4f6;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.resume-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #9333ea;
+}
+
+.resume-content {
+  white-space: pre-wrap;
+  color: #1f2937;
+}
