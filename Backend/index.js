@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 
 app.post('/upload-resume', upload.single('resume'), async (req, res) => {
-    console.log(req.file);
+    console.log("this line print:",req.file);
   try {
     const filePath = req.file.path;
     // console.log(filePath);
@@ -27,9 +27,9 @@ app.post('/upload-resume', upload.single('resume'), async (req, res) => {
     // console.log(fileData);
     // Extract text using pdf-parse
     const pdfData = await pdfParse(fileData);
-    // console.log(pdfData);
+    console.log("this line print:",pdfData.info);
     const text = pdfData.text;
-    // console.log(text);
+    console.log("This line print:",text);
 
     // Delete the uploaded file after processing (optional)
     fs.unlinkSync(filePath);
