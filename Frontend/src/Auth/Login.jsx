@@ -48,7 +48,7 @@ export default function LoginForm() {
   return (
     <>
       <div className='flex h-screen w-full'>
-        <div className='hidden md:block md:w-1/1 bg-gray-400'>
+        <div className='hidden md:block md:w-1/2 bg-gray-400'>
           <h1 className="flex flex-col justify-center items-center mt-26 text-3xl sm:text-4xl font-extrabold text-white mb-6 ">
             <span className='text-white'> Welcome to <span className='text-purple-500'>SmartHire.</span></span>
            <img
