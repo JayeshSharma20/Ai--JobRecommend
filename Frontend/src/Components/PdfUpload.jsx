@@ -13,7 +13,6 @@ const PdfUpload = () => {
     console.log(selected, "handleFileChange triggered");
     setFile(selected);
   };
-
   const handleUpload = async () => {
     if (!file) return alert("Please select a file");
 
@@ -28,7 +27,7 @@ const PdfUpload = () => {
       console.log(res);
       // console.log("Extracted Resume Text:", res.data.content);
       console.log("File uploaded successfully:");;
-      setPdfText(res.data.content);
+      // setPdfText(res.data.content);
     } catch (err) {
       console.error(err);
       console.log("Upload failed.");
@@ -39,7 +38,7 @@ const PdfUpload = () => {
     <div className="upload-page">
       <div className="navbar">
         <div className="logo">
-          Job.<span className="logo-dark">Recommend</span>
+          Smart.<span className="logo-dark">Hire</span>
         </div>
         <div className="nav-actions">
           <button
