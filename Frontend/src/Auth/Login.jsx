@@ -8,7 +8,8 @@ import { toast } from 'react-toastify';
 import image from '../assets/Pic1.png'
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../reduxStore/reducer/authReducer.js';
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
+import Button from '../Utils/Button.jsx';
 
 const loginSchema = Yup.object().shape({
   username: Yup.string().required('*Username is required'),
@@ -101,15 +102,11 @@ export default function LoginForm() {
                       </div>
                       <ErrorMessage name="password" component="div" className="text-red-600 mt-1 text-sm min-h-[20px]" />
                     </div>
-                    <Button
-                      variant='primary'
-                      type="submit"
-                      className="w-50 py-2 mt-4 bg-purple-500 text-white font-semibold rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? 'Signing in...' : 'Sign In'}
+                    <Button>
+                       {isSubmitting ? 'Signing in...' : 'Sign In'}
                     </Button>
                   </Form>
+                     
                 )}
               </Formik>
               <div>
