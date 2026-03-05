@@ -17,7 +17,7 @@ const Signup = () => {
     password: Yup.string().required("Password is required"),
   });
 
-  const handleSignup = async (e) => {
+  const handleSignup = async () => {
     // e.preventDefault();
     try {
       const res = await axios.post({ email, name, password });
@@ -29,7 +29,7 @@ const Signup = () => {
 
   return (
     <div className="flex h-screen w-full">
-      <div className="hidden md:block md:w-1/1 bg-gray-400">
+      <div className="hidden md:block md:w-1/2 bg-gray-400">
         <h1 className="flex flex-col justify-center items-center mt-20 text-xl sm:text-xl font-extrabold text-white mb-6 ">
           <span className="text-white">Join <span className="text-purple-500">SmartHire</span> Today.🚀 </span>
           Create your free account to get smart resume analysis

@@ -8,7 +8,8 @@ import { toast } from 'react-toastify';
 import image from '../assets/Pic1.png'
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../reduxStore/reducer/authReducer.js';
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
+import Button from '../Utils/Button.jsx';
 
 const loginSchema = Yup.object().shape({
   username: Yup.string().required('*Username is required'),
@@ -46,87 +47,83 @@ export default function LoginForm() {
   };
 
   return (
-    <>
-      <div className='flex h-screen w-full'>
-        <div className='hidden md:block md:w-1/1 bg-gray-400'>
-          <h1 className="flex flex-col justify-center items-center mt-26 text-3xl sm:text-4xl font-extrabold text-white mb-6 ">
-            <span className='text-white'> Welcome to <span className='text-purple-500'>SmartHire.</span></span>
-           <img
-            src={image}
-            alt="Job Illustration"
-            className="max-w-[500px] h-auto"
-          />
+      <>
+        <div className='flex h-screen w-full'>
+          <div className='hidden md:block md:w-1/2 bg-gray-400'>
+            <h1 className="flex flex-col justify-center items-center mt-26 text-3xl sm:text-4xl font-extrabold text-white mb-6 ">
+              <span className='text-white'> Welcome to <span className='text-purple-500'>SmartHire.</span></span>
+            <img
+              src={image}
+              alt="Job Illustration"
+              className="max-w-[500px] h-auto"
+            />
+            </h1>
+          </div>
+          <div className="flex flex-col justify-center items-start w-full md:w-1/2 px-4 sm:px-4 bg-white" >
+            <h1 className="text-2xl sm:text-3xl font-extrabold  text-gray-500">
+            Sign<span className="text-purple-400"> In</span>
+            <p className="text-sm sm:text-lg">Your Job Reccomendation Start Here.</p>
           </h1>
-        </div>
-        <div className="flex flex-col justify-center items-start w-full md:w-1/2 px-4 sm:px-4 bg-white" >
-          <h1 className="text-2xl sm:text-3xl font-extrabold  text-gray-500">
-          Sign<span className="text-purple-400"> In</span>
-          <p className="text-sm sm:text-lg">Your Job Reccomendation Start Here.</p>
-        </h1>
-            <Formik
-              initialValues={{ username: '', password: '' }}
-              validationSchema={loginSchema}
-              onSubmit={handleLogin}
-            >
-              {({ isSubmitting }) => (
-                <Form className="flex flex-col sm:gap-4 mt-6">
-                  <div>
-                    <label htmlFor="username" className="block text-sm font-bold text-gray-500 mb-1">Username:</label>
-                    <Field
-                      id="username"
-                      name="username"
-                      type="text"
-                      placeholder="Enter username"
-                      className="w-full sm:w-100 px-4 py-2 bg-white text-gray-500 border border-gray-700 rounded-lg"
-                    />
-                    <ErrorMessage name="username" component="div" className="text-red-600 mt-1 text-sm min-h-[20px]" />
-                  </div>
-
-                  <div>
-                    <label htmlFor="password" className="block text-sm font-bold text-gray-500 mb-1">Password:</label>
-                    <div className="relative">
+              <Formik
+                initialValues={{ username: '', password: '' }}
+                validationSchema={loginSchema}
+                onSubmit={handleLogin}
+              >
+                {({ isSubmitting }) => (
+                  <Form className="flex flex-col sm:gap-4 mt-6">
+                    <div>
+                      <label htmlFor="username" className="block text-sm font-bold text-gray-500 mb-1">Username:</label>
                       <Field
-                        id="password"
-                        name="password"
-                        type={showPassword ? 'text' : 'password'}
-                        placeholder="Enter password"
-                        className="w-full sm:w-100 px-4 py-2 border text-gray-500 border-gray-700 rounded-lg"
+                        id="username"
+                        name="username"
+                        type="text"
+                        placeholder="Enter username"
+                        className="w-full sm:w-100 px-4 py-2 bg-white text-gray-500 border border-gray-700 rounded-lg"
                       />
-                      <span
-                        className="w-6 sm:w-6 absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500 hover:text-gray-700"
-                        onClick={() => setShowPassword(!showPassword)}
-                      >
-                        {showPassword ? <FaEye /> : <FaEyeSlash />}
-                      </span>
+                      <ErrorMessage name="username" component="div" className="text-red-600 mt-1 text-sm min-h-[20px]" />
                     </div>
-                    <ErrorMessage name="password" component="div" className="text-red-600 mt-1 text-sm min-h-[20px]" />
-                  </div>
-                  <Button
-                    variant='primary'
-                    type="submit"
-                    className="w-50 py-2 mt-4 bg-purple-500 text-white font-semibold rounded-md shadow-md hover:shadow-lg transition-shadow duration-300"
-                    disabled={isSubmitting}
+
+                    <div>
+                      <label htmlFor="password" className="block text-sm font-bold text-gray-500 mb-1">Password:</label>
+                      <div className="relative">
+                        <Field
+                          id="password"
+                          name="password"
+                          type={showPassword ? 'text' : 'password'}
+                          placeholder="Enter password"
+                          className="w-full sm:w-100 px-4 py-2 border text-gray-500 border-gray-700 rounded-lg"
+                        />
+                        <span
+                          className="w-6 sm:w-6 absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500 hover:text-gray-700"
+                          onClick={() => setShowPassword(!showPassword)}
+                        >
+                          {showPassword ? <FaEye /> : <FaEyeSlash />}
+                        </span>
+                      </div>
+                      <ErrorMessage name="password" component="div" className="text-red-600 mt-1 text-sm min-h-[20px]" />
+                    </div>
+                    <Button>
+                       {isSubmitting ? 'Signing in...' : 'Sign In'}
+                    </Button>
+                  </Form>
+                     
+                )}
+              </Formik>
+              <div>
+                <p className="text-sm text-gray-500 mt-4">
+                  Don't have an account?{' '}
+                  <span
+                    className="text-purple-600 cursor-pointer hover:underline"
+                    onClick={() => {
+                      navigate('/signup');
+                    }}
                   >
-                    {isSubmitting ? 'Signing in...' : 'Sign In'}
-                  </Button>
-                </Form>
-              )}
-            </Formik>
-            <div>
-              <p className="text-sm text-gray-500 mt-4">
-                Don't have an account?{' '}
-                <span
-                  className="text-purple-600 cursor-pointer hover:underline"
-                  onClick={() => {
-                    navigate('/signup');
-                  }}
-                >
-                  Sign Up
-                </span>
-              </p>
-            </div>
+                    Sign Up
+                  </span>
+                </p>
+              </div>
+          </div>
         </div>
-      </div>
-    </>
+      </>
   );
 }
