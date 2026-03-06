@@ -173,7 +173,7 @@ export default function LoginForm() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-800 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                    className="cursor-pointer w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/50 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-800 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center justify-center">
@@ -194,7 +194,7 @@ export default function LoginForm() {
                       <button
                         type="button"
                         onClick={() => navigate('/signup')}
-                        className="text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-200 hover:underline"
+                        className="cursor-pointer text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-200 hover:underline"
                       >
                         Sign Up
                       </button>
